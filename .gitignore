@@ -1,0 +1,111 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.virtual_documents
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Kaggle
+.kaggle/
+kaggle.json
+
+# Dataset (large files)
+dataset/
+data/
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.gif
+*.mp4
+*.avi
+
+# Model weights and outputs (large files)
+runs/
+weights/
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.pb
+*.weights
+best.pt
+last.pt
+
+# Results and logs
+results/
+output/
+outputs/
+logs/
+wandb/
+mlruns/
+tensorboard/
+
+# Checkpoints
+checkpoints/
+*.ckpt
+
+# Compressed files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# System files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+# GitHub (if you want to ignore instructions)
+.github/
+
+# Cache
+.cache/
+*.cache
