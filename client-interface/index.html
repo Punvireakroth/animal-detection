@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ប្រព័ន្ធរកឃើញសត្វ - Animal Detection System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🐾 ប្រព័ន្ធស្វែងរកសត្វដោយស្វ័យប្រវត្តិ</h1>
+            <p class="subtitle">ប្រើប្រាស់បញ្ញាសិប្បនិមិត្ត (AI) ដើម្បីរកឃើញសត្វ ៥ ប្រភេទ</p>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📸</div>
+                    <h2>អូសរូបភាពមកទីនេះ ឬចុចដើម្បីជ្រើសរើស</h2>
+                    <p>ទ្រង់ទ្រាយដែលគាំទ្រ: JPG, PNG, JPEG</p>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                    <button class="btn-upload" id="uploadBtn">ជ្រើសរើសរូបភាព</button>
+                </div>
+            </section>
+
+            <!-- Preview Section -->
+            <section class="preview-section" id="previewSection" style="display: none;">
+                <div class="image-container">
+                    <h3>រូបភាពដើម</h3>
+                    <img id="originalImage" alt="Original Image">
+                </div>
+                <div class="result-container">
+                    <h3>លទ្ធផលការស្វែងរក</h3>
+                    <canvas id="resultCanvas"></canvas>
+                    <div id="loadingSpinner" class="spinner" style="display: none;">
+                        <div class="loader"></div>
+                        <p>កំពុងវិភាគរូបភាព...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h3>📊 ព័ត៌មានលម្អិត</h3>
+                <div class="results-grid" id="resultsGrid">
+                    <!-- Results will be inserted here -->
+                </div>
+                <div class="stats-container" id="statsContainer">
+                    <!-- Statistics will be inserted here -->
+                </div>
+            </section>
+
+            <!-- Actions -->
+            <section class="actions-section" id="actionsSection" style="display: none;">
+                <button class="btn-primary" id="analyzeBtn">🔍 ចាប់ផ្តើមវិភាគ</button>
+                <button class="btn-secondary" id="downloadBtn">💾 ទាញយករូបភាព</button>
+                <button class="btn-secondary" id="resetBtn">🔄 ចាប់ផ្តើមឡើងវិញ</button>
+            </section>
+        </main>
+
+        <!-- Info Section -->
+        <section class="info-section">
+            <h3>🎯 អំពីប្រព័ន្ធនេះ</h3>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>ប្រភេទសត្វ ៥ ប្រភេទ</h4>
+                    <ul id="classList">
+                        <!-- Will be populated by JS -->
+                    </ul>
+                </div>
+            
+                <div class="info-card">
+                    <h4>របៀបប្រើប្រាស់</h4>
+                    <ol>
+                        <li>ជ្រើសរើសរូបភាពសត្វ</li>
+                        <li>ចុចប៊ូតុង "ចាប់ផ្តើមវិភាគ"</li>
+                        <li>រង់ចាំលទ្ធផល</li>
+                        <li>ទាញយករូបភាពបាន</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2024 ប្រព័ន្ធរកឃើញសត្វ | បង្កើតដោយប្រើ YOLOv8 និង ONNX Runtime</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="js/onnx-inference.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
